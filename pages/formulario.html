@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale comigo</title>
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h1>Entre em contato comigo agora:</h1>
-    <form>
-        <label for="nome">Nome: </label>
-        <input type="text" id="nome">
-        <br>
-        <label for="email">Email: </label>
-        <input type="email" id="nome">
-        <br>
-        <label for="assunto">Assunto: </label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <br>
-        <button>Enviar</button>
-    </form>
+    <div id="topoformulario"> <h1 id="inicio">Entre em contato comigo agora:</h1>
+        <a href="../index.html"><svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="84" width="84" height="84" rx="42" transform="rotate(-90 0 84)" fill="#9BC9FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M41.2127 15.9124L14 42.0978L41.2127 68.2832V51.775L68.4254 51.775V32.4238L41.2127 32.4238L41.2127 15.9124Z" fill="white"/>
+            </svg>
+            </a></div>
+    <div id="area">
+        <form>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" placeholder="Digite o seu nome">
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Digite o seu e-mail. Ex.: teste@teste.com">
+            <label for="assunto">Assunto: </label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button>Enviar</button>
+        </form>
+    </div>
+    
     <h2>Endereço: </h2>
     <p>1101 Pennsylvania Avenue NW, Pennsylvania Avenue NW</p>
     <p>Washington, DC</p>
     <p></p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.243979388964!2d-77.0273519!3d38.895535699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b790adce4195%3A0x25bc469e9e2f4619!2s1101%20Pennsylvania%20Avenue%20NW%20Suite%20300%2C%20Washington%2C%20DC%2020004%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1712020764801!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <br>
-    <a href="../index.html">Voltar para o menu inicial</a>
+    
+    <a href="#inicio"><svg id="irparaotopo"width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="69.4529" height="69.4529" rx="34.7265" fill="#9BC9FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.6506 35.5L35 13L13.3494 35.5H27V58H43V35.5H56.6506Z" fill="white"/>
+        </svg>
+        </a>
 </body>
 </html>
