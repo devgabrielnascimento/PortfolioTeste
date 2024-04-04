@@ -11,17 +11,83 @@
 }
 
 body {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+  width: 100%;
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: regular;
   color: black;
+  gap: 20px;
 }
 
+#main {
+  width: 50%;
+  height: auto;
+  /* background-color: red; */
+}
+
+header {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  padding: 0px, 8px;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(242, 242, 242);
+  box-shadow: 2px 4px rgb(229, 226, 226);
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin-top: 300px;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#stared_item a {
+  background-color: var(--bg-color);
+  color: black;
+}
+
+#item a {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: black;
+}
+#item a:hover {
+  background-color: #646161;
+  color: white;
+}
+
+#item a:active {
+  background-color: #383636;
+}
 svg {
   width: 30px;
   height: 30px;
@@ -64,12 +130,36 @@ svg {
 #contato_celular {
   display: flex;
   position: fixed;
-  right: 100px;
-  bottom: 50px;
+  bottom: 0;
+  right: 25%;
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   box-shadow: 3px 3px gray;
   border-radius: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+#icons_footer {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ede9e5;
+}
+
+#icons_footer svg {
+  display: flex;
+}
+
+#div_direitos_reservados {
+  background-color: var(--bg-color);
 }
 
 /******************************* FORMULARIO *******************************/
@@ -78,6 +168,7 @@ svg {
   display: flex;
   gap: 100px;
   align-items: center;
+  margin-top: 250px;
 }
 
 #topoformulario svg {
@@ -138,7 +229,7 @@ button:active {
 
 #irparaotopo {
   position: relative;
-  left: 100%;
+  left: 25%;
   bottom: 5%;
   width: 50px;
   height: 50px;
