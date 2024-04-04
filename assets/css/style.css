@@ -64,7 +64,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
+  width: 180px;
   height: 40px;
   text-decoration: none;
   font-size: 16px;
@@ -73,6 +73,7 @@ h1 {
 #stared_item a {
   background-color: var(--bg-color);
   color: black;
+  cursor: default;
 }
 
 #item a {
@@ -88,6 +89,32 @@ h1 {
 #item a:active {
   background-color: #383636;
 }
+
+#cv a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: black;
+  gap: 10px;
+}
+
+#cv svg {
+  margin: 4px;
+}
+
+#cv path {
+  fill: black;
+}
+
+#cv a:hover,
+#cv a:hover path {
+  fill: #ffffff;
+  background-color: #425693;
+  color: white;
+}
+
 svg {
   width: 30px;
   height: 30px;
