@@ -44,7 +44,6 @@ header {
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 30px;
 }
 
 h1 {
@@ -336,6 +335,7 @@ iframe
 @media only screen and (max-width: 768px) {
   header {
     gap: 70%;
+    padding-top: 16px;
   }
 
   #dropdown_hamburguer {
