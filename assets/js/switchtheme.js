@@ -18,5 +18,4 @@ const header = document.querySelector("header")
             header.style.boxShadow = "2px 4px #333232";
         }
         }
-      )
-      ;
+      );
