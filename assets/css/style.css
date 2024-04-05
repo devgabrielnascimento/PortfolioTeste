@@ -146,9 +146,8 @@ rect:active {
 
 #dropdown_content {
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-
 
 .dropdown-content a {
   color: black;
@@ -183,11 +182,13 @@ h3 {
 }
 
 @keyframes animate-fade {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 #contato_celular {
   display: flex;
@@ -300,65 +301,55 @@ button:active {
   height: 50px;
 }
 
-
 /******************************* MOBILE *******************************/
 
 @media only screen and (max-width: 768px) {
-
   header {
     gap: 400px;
   }
-  
 
   #dropdown_hamburguer {
-  display: inline-block;
+    display: inline-block;
   }
 
   #dropdown-content {
     display: none;
     background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
 
   #dropdown_hamburguer:hover #dropdown-content {
     display: block;
     justify-content: center;
     color: black;
-  text-decoration: none;
-  position: fixed;
-        left: 80%;
-        top: 60%;
-        
+    text-decoration: none;
+    position: fixed;
+    left: 80%;
+    top: 60%;
   }
-  
-  
-  
-  
-  
-  
+
   #dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  
-  
+
   #dropdown_hamburguer:hover .stroke1 {
     transition: 5s ease;
     animation: crossAnimation1 3s forwards;
   }
-  
+
   #dropdown_hamburguer:hover .stroke2 {
     transition: 5s ease;
     animation: crossAnimation2 3s forwards;
   }
-  
+
   #dropdown_hamburguer:hover .stroke3 {
     transition: 5s ease;
     animation: crossAnimation3 3s forwards;
   }
-  
+
   @keyframes crossAnimation1 {
     0% {
       d: path("M19 3.5H0V0.5H19V3.5ZM19");
@@ -366,10 +357,10 @@ button:active {
     }
     100% {
       d: path("M19 3.5H0V0.5H19V3.5ZM19");
-      rotate: 50deg; /* Movendo para 90 graus */
+      rotate: 50deg;
     }
   }
-  
+
   @keyframes crossAnimation2 {
     0% {
       d: path("M19 12.5H0V9.5H19V12.5ZM0.5Z");
@@ -377,10 +368,10 @@ button:active {
     }
     100% {
       d: path("M19 12.5H0V9.5H19V12.5ZM0.5Z");
-      rotate: 135turn; /* Movendo para 180 graus */
+      rotate: 135turn;
     }
   }
-  
+
   @keyframes crossAnimation3 {
     0% {
       d: path("M19 20.5H19V17.5H0V20.5Z");
@@ -388,10 +379,9 @@ button:active {
     }
     100% {
       d: path("M19 20.5H19V17.5H0V20.5Z");
-      transform: rotate(-0.13turn); /* Movendo para 360 graus */
+      transform: rotate(-0.13turn);
     }
   }
-  
 
   #navbar {
     display: none;
