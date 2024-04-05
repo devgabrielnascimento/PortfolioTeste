@@ -22,20 +22,19 @@ body {
   font-weight: 300;
   font-style: regular;
   color: black;
-  gap: 20px;
 }
 
 #main {
-  width: 50%;
+  min-width: 50%;
   height: auto;
   /* background-color: red; */
 }
 
 header {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
-  padding: 0px, 8px;
+  min-width: 100%;
+  justify-content: space-around;
+  padding: 0px 20px;
   align-items: center;
   height: 100px;
   background-color: rgb(255, 255, 255);
@@ -48,7 +47,8 @@ header {
 }
 
 h1 {
-  margin-top: 300px;
+  margin-top: 600px;
+  margin-left: 20px;
 }
 #navbar {
   display: flex;
@@ -64,7 +64,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
+  min-width: 140px;
   height: 40px;
   text-decoration: none;
   font-size: 16px;
@@ -84,6 +84,7 @@ h1 {
 #item a:hover {
   background-color: #646161;
   color: white;
+  transition: color 0.5s ease-out;
 }
 
 #item a:active {
@@ -113,6 +114,7 @@ h1 {
   fill: #ffffff;
   background-color: #425693;
   color: white;
+  transition: color 0.5s ease-out;
 }
 
 svg {
@@ -133,6 +135,26 @@ rect:active {
   fill: var(--color-active);
 }
 
+#dropdown_hamburguer,
+#dropdown-content {
+  display: none;
+}
+
+#dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+#dropdown_content {
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+}
+
 h3 {
   padding-left: 10px;
 }
@@ -146,13 +168,26 @@ th,
 td {
   padding-left: 20px;
 }
-
+img,
 h2,
 p,
-h3,
-svg {
+h3 {
   margin: 20px;
 }
+
+.certifications {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 
 #contato_celular {
   display: flex;
@@ -176,6 +211,7 @@ footer {
 #icons_footer {
   display: flex;
   height: 40px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   background-color: #ede9e5;
@@ -238,11 +274,13 @@ button {
   font-weight: 600;
   font-style: normal;
   color: white;
+  transition: color 0.5s ease-out;
 }
 
 button:hover {
   background-color: rgb(174, 84, 0);
   cursor: pointer;
+  transition: color 0.5s ease-out;
 }
 
 button:active {
@@ -260,4 +298,102 @@ button:active {
   bottom: 5%;
   width: 50px;
   height: 50px;
+}
+
+
+/******************************* MOBILE *******************************/
+
+@media only screen and (max-width: 768px) {
+
+  header {
+    gap: 400px;
+  }
+  
+
+  #dropdown_hamburguer {
+  display: inline-block;
+  }
+
+  #dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  #dropdown_hamburguer:hover #dropdown-content {
+    display: block;
+    justify-content: center;
+    color: black;
+  text-decoration: none;
+  position: fixed;
+        left: 80%;
+        top: 60%;
+        
+  }
+  
+  
+  
+  
+  
+  
+  #dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  #dropdown_hamburguer:hover .stroke1 {
+    transition: 5s ease;
+    animation: crossAnimation1 3s forwards;
+  }
+  
+  #dropdown_hamburguer:hover .stroke2 {
+    transition: 5s ease;
+    animation: crossAnimation2 3s forwards;
+  }
+  
+  #dropdown_hamburguer:hover .stroke3 {
+    transition: 5s ease;
+    animation: crossAnimation3 3s forwards;
+  }
+  
+  @keyframes crossAnimation1 {
+    0% {
+      d: path("M19 3.5H0V0.5H19V3.5ZM19");
+      rotate: 0deg;
+    }
+    100% {
+      d: path("M19 3.5H0V0.5H19V3.5ZM19");
+      rotate: 50deg; /* Movendo para 90 graus */
+    }
+  }
+  
+  @keyframes crossAnimation2 {
+    0% {
+      d: path("M19 12.5H0V9.5H19V12.5ZM0.5Z");
+      rotate: 0deg;
+    }
+    100% {
+      d: path("M19 12.5H0V9.5H19V12.5ZM0.5Z");
+      rotate: 135turn; /* Movendo para 180 graus */
+    }
+  }
+  
+  @keyframes crossAnimation3 {
+    0% {
+      d: path("M19 20.5H19V17.5H0V20.5Z");
+      rotate: 0deg;
+    }
+    100% {
+      d: path("M19 20.5H19V17.5H0V20.5Z");
+      transform: rotate(-0.13turn); /* Movendo para 360 graus */
+    }
+  }
+  
+
+  #navbar {
+    display: none;
+  }
 }
