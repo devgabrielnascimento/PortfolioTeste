@@ -22,9 +22,9 @@ textarea::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
-background-color: var(--bg-color);
-outline: 1px solid slategrey;
-border-radius: 45px;
+  background-color: var(--bg-color);
+  outline: 1px solid slategrey;
+  border-radius: 45px;
 }
 
 body {
@@ -72,6 +72,7 @@ header {
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding-top: 12px;
 }
 
 h1 {
@@ -222,11 +223,10 @@ h3 {
 #contato_celular {
   display: flex;
   position: fixed;
-  bottom: 0;
-  right: 25%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  bottom: 20%;
+  right: 20%;
+  width: 80px;
+  height: 80px;
   box-shadow: 3px 3px gray;
   border-radius: 100%;
 }
@@ -240,7 +240,7 @@ footer {
 
 #icons_footer {
   display: flex;
-  height: 40px;
+  height: 60px;
   gap: 10px;
   align-items: center;
   justify-content: center;
@@ -249,6 +249,8 @@ footer {
 
 #icons_footer svg {
   display: flex;
+  width: 40px;
+  height: 40px;
 }
 
 #div_direitos_reservados {
@@ -359,7 +361,7 @@ iframe {
 @media only screen and (max-width: 768px) {
   header {
     gap: 30%;
-    padding-top: 8px;
+    padding-top: 8%;
   }
 
   #dropdown_hamburguer {
@@ -445,8 +447,15 @@ iframe {
   #navbar li {
     display: none;
   }
+  #theme {
+    display: flex;
+  }
+  
+  #contato_celular {
+    width: 50px;
+    height: 50px;
+    bottom: 20%;
+    left: 80%;
+  }
 }
 
-#theme {
-  display: flex;
-}
